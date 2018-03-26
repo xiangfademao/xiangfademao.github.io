@@ -1,32 +1,111 @@
-# About
+# White Paper
 
-This is my blog based on jekyll. And I change the style and interactive. If you want to use this model of the blog. **Please give a star at this repository**. Then you can clone it as your blog model.
+**White Paper** is a theme for Jekyll. It is built keeping content in focus and is best for writers/developers who also like to share code with their essays.
 
-You can visit [here](http://gaohaoyang.github.io) to see this blog.
+# White Paper in Action
 
----
+- Home page
 
-这是我的博客，基于 jekyll。我改了所有默认的样式和交互。如果你想使用这个博客模板。**请先在这个仓库上点个star吧**，这也是对我的肯定和鼓励，谢谢了。然后你可以克隆这个仓库用作你自己的博客。
-
-博客访问地址：[点击这里](http://gaohaoyang.github.io)
-
-**使用时请注明模板来源:  Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
-
-<!--
-
-## 被引用信息
-
-使用了我的模板并写明来源的人：   
-
-* [dreamholy](http://dreamholy.github.io/)
-
-没有注明来源的人：
-
-* [yangshuailing](http://yangshuailing.github.io/com/)
-* [huapu728](http://huapu728.github.io/)
-* [greatbuger](http://greatbuger.github.io/) 
+![home](https://cldup.com/FRewyA-EEI-3000x3000.png)
 
 
--->
+- Post Detail View
+
+![post detail](https://cldup.com/mERDZPBshM-3000x3000.png)
+
+## How to use White Paper
+
+Fork the repo to your account by clicking the button on the top right as shown in the image:
+
+![fork](https://cldup.com/vOF0oaUkh5-3000x3000.png) and then where you want to fork it as shown below.
+
+Next, Go the the project settings and change the repository name to `<username>.github.io` where username is your username.
+
+Change these entries in the `_config.yml` file:
+
+Also, change this line in head.html [link](https://github.com/vinitkumar/white-paper/blob/9ad021a8f94c6240351bd57eda301b5f207e554e/_includes/head.html#L28)
+
+```html
+<!-- From this -->
+<link rel="stylesheet" href=" {{ '/css/main.min.css' | relative_url }}" type="text/css" />
+<!-- To this -->
+<link rel="stylesheet" href=" {{ '/css/main.min.css' | absolute_url }}" type="text/css" />
+
+```
 
 
+This will make sure that the path of CSS is correct and the theme loads correctly.
+
+```yml
+master_repo: false
+url: "<username>.github.io"
+rtl: false  # change to true if posts is in Arabic/other Right to left language.
+```
+Also, change all other fields in the `_config.yml` file to your choice.
+
+## Installation
+
+### Local Development
+
+This theme requires you to install couple of tools first to setup jekyll locally.
+
+```$
+git clone git@github.com:vinitkumar/white-paper.git
+
+# If you have ruby installed.
+gem install jekyll bundler
+
+# If you have node installed.
+npm install
+sudo npm install -g grunt-cli  #to get the task runner for grunt.
+bundle install
+jekyll serve
+
+# on running the serve script, the site will be live on
+http://127.0.0.1:4000
+```
+This theme uses grunt to concat & minify the css for best performance. In order to prepare the css build. Run `grunt`
+It will create a main.min.css file in the css folder.
+
+### Switch Syntax Highlighting.
+
+This theme also provides syntax highlighting in different theme. Inside css folder, there is a syntax folder.
+
+```$
+.
+├── emacs.css
+├── github.css
+├── monokai.css
+├── native.css
+├── syntax.css
+└── vim.css
+
+```
+
+Now in the gruntfiles.js
+
+```js
+concat: {
+  dist: {
+    src: [
+      'css/base.css',
+      'css/sytax/emacs.css', // change this to another theme if you prefer, like vim.css and run grunt
+      'css/octicons.css'
+    ],
+    dest: 'css/<%= pkg.name %>.add.css'
+  }
+}
+```
+
+## License
+* see [LICENSE](https://github.com/vinitkumar/white-paper/blob/gh-pages/LICENSE) file
+
+## Version
+* Version 4.0.0
+
+## Contact
+#### Developer
+
+* Homepage: http://vinitkumar.me
+* e-mail: vinit1414.08@bitmesra.ac.in
+* Twitter: [@vinitkme](https://twitter.com/vinitkme "vinitkme on twitter")
