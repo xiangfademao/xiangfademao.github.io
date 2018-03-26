@@ -1,4 +1,4 @@
-name: White Paper
+name: 想法的猫
 description: >
     A simple jekyll theme aimed at programmers who like clean interface to write posts
     and show off some code.
@@ -19,9 +19,9 @@ logo:             logo.png
 disqus_shortname:
 
 owner:
-  name:           whitepaper
+  name:           想法的猫
   avatar:         ""
-  email:          ""
+  email:          "xiangfademao@gmail.com"
   # Social networking links used in footer. Update and remove as you like.
   twitter:
   github:
