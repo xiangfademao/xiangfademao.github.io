@@ -20,11 +20,11 @@ disqus_shortname:
 
 owner:
   name:           想法的猫
-  avatar:         ""
+  avatar:         "https://avatars3.githubusercontent.com/u/36157582?s=400&u=cf5598b9a0abbac78ade8b5053237b5267c98bb8&v=4"
   email:          "xiangfademao@gmail.com"
   # Social networking links used in footer. Update and remove as you like.
   twitter:
-  github:
+  github:          "https://github.com/xiangfademao"
   stackexchange:
   # For Google Authorship https://plus.google.com/authorship
   google_plus:
