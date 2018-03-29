@@ -467,9 +467,9 @@ pre {
 }
 code{
   padding: 0 4px;
-  font-size: 0.9em;
-  color: #556270;
-  background: #F4FAFF;
+  font-size: 1em;
+  color: #64A9FF;
+  background: #263238;
   border-radius: 3px;
 }
 pre code {
