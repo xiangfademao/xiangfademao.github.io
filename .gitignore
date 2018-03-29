@@ -3,3 +3,4 @@ _site
 .sass-cache
 .jekyll-metadata
 Gemfile.lock
+css/pygments14.css
