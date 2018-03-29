@@ -10,7 +10,7 @@ baseurl: ""
 markdown: kramdown
 highlighter: rouge
 
-gems: [rouge,  jekyll-gist]
+gems: [jekyll-paginate,  jekyll-gist]
 paginate: 3
 
 logo:             logo.png
