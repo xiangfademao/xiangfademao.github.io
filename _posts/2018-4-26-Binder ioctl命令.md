@@ -1,10 +1,10 @@
 ﻿---
 layout: post
-title: "Binder ioctl"
+title: "Binder ioctl命令"
 date: 2018-04-27 10:34:34
 comments: true
 categories: 
-
+---
 
 ## 摘抄自网络 ##    
 
