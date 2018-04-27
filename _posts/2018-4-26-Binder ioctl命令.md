@@ -5,11 +5,8 @@ date: 2018-04-27 10:34:34
 comments: true
 categories: 
 
----
-# Binder ioctl命令
----
-## 摘抄自网络 ##    
 
+## 摘抄自网络 ##    
 
 命令 | 意思 
 - | :-: | -: 
@@ -22,10 +19,10 @@ BINDER_WRITE_READ     |注①:向Binder写入或读取数据，对应的数据�
 
 注释：   
 
- ① Binder写入或读取数据，对应的数据结构为binder_write_read；参数分为两段：写部分和读部分。如果write_size不为0就先将write_buffer里的数据写入Binder；如果read_size不为0再从Binder中读取数据存入read_buffer中。write_consumed和read_consumed表示操作完成时Binder驱动实际写入或读出的数据个数。如果需要返回数据，那么read_size和read_buffer必须设置，BINDER_WRITE_READ命令关联的数据分为读写两个buffer，对应write_buffer和read_buffer，按照惯例，buffer头四个字节用于数据类型描述。
+ ① **BINDER_WRITE_READ:**  Binder写入或读取数据，对应的数据结构为binder_write_read；参数分为两段：写部分和读部分。如果write_size不为0就先将write_buffer里的数据写入Binder；如果read_size不为0再从Binder中读取数据存入read_buffer中。write_consumed和read_consumed表示操作完成时Binder驱动实际写入或读出的数据个数。如果需要返回数据，那么read_size和read_buffer必须设置，BINDER_WRITE_READ命令关联的数据分为读写两个buffer，对应write_buffer和read_buffer，按照惯例，buffer头四个字节用于数据类型描述。
  
  这些数据类型以宏的形式定义，以BC或者BR开头：
-1、**(Writebuffer) BC_XXX，全称为Binder Driver Command Protocol， 是指App –>Binder Kernel命令**    
+1、**(Writebuffer) BC_XXX，全称为Binder Driver Command Protocol， 是指App –>Binder Kernel命令**   
 2、**(Readbuffer) BR_XXX，全称为Binder Driver Return Protocol，是指BinderKernel –> App命令** 
 
 
