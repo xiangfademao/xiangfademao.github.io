@@ -1,14 +1,27 @@
 <div class="header-container container">
-  <header>
-    <a href="{{ site.url }}" class="top-link">{{ site.name }}</a>
-      <ul class="nav">
-        <!--Change the  URL here if working on an absolute domain-->
-        <li><a href="{{ site.url }}">Home</a></li>
-       <!--  <li><a href="{{ site.url }}/about">About</a></li> -->
-        {% if site.owner.github %}
-          <li><a href="{{ site.owner.github }}" target="_blank">Projects</a></li>
-        {% endif %}
-        <!-- <li><a href="{{ site.url }}/feed.xml">RSS</a></li> -->
-      </ul>
-  </header>
+	<header>
+		<a href="{{ site.url }}" class="top-link">{{ site.name }}</a>
+		<ul class="nav">
+			<!--Change the  URL here if working on an absolute domain-->
+			<li><a href="{{ site.url }}">Home</a></li>
+			<!--  <li><a href="{{ site.url }}/about">About</a></li> -->
+			{% if site.owner.github %}
+			<li><a href="{{ site.owner.github }}" target="_blank">Projects</a></li>
+			{% endif %}
+			<!-- <li><a href="{{ site.url }}/feed.xml">RSS</a></li> -->
+		</ul>
+	</header>
 </div>
+<style>
+	table{
+		border-left:1px solid #000000;border-top:1px solid #000000;
+		width: 100%;
+		word-wrap:break-word; word-break:break-all;
+	}
+	table th{
+		text-align:center;
+	}
+	table th,td{
+		border-right:1px solid #000000;border-bottom:1px solid #000000;
+	}
+</style>
